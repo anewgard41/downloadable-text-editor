@@ -11,14 +11,24 @@ module.exports = () => {
     mode: 'development',
     entry: {
       main: './src/js/index.js',
-      install: './src/js/install.js'
+      install: './src/js/install.js',
     },
     output: {
       filename: '[name].bundle.js',
       path: path.resolve(__dirname, 'dist'),
     },
     plugins: [
-      
+      // adding the service worker 
+      new InjectManifest({
+        swSrc: "./src-sw.js",
+        swDest: "src-sw.js",
+      }), 
+
+      // Introducing the WebPack plugin responsible for generating html files and injecting bundles
+      new HtmlWebpackPlugin({
+        template: "./index.html",
+        title: "Just Another Text Editor"
+      })
     ],
 
     module: {
