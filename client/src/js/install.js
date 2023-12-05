@@ -4,7 +4,7 @@ const butInstall = document.getElementById('buttonInstall');
 // TODO: Add an event handler to the `beforeinstallprompt` event
 window.addEventListener('beforeinstallprompt', (event) => {
     event.preventDefault();
-    installBtn.style.visiblity = 'visible';
+    butInstall.style.visiblity = 'visible';
     
 });
 
@@ -23,7 +23,7 @@ butInstall.addEventListener('click', async () => {
         console.log('User dismissed the A2HS prompt');
     }
     window.deferredPrompt = null;
-    installBtn.style.visiblity = 'hidden';
+    butInstall.style.visiblity = 'hidden';
 });
 
 // TODO: Add an handler for the `appinstalled` event
