@@ -17,6 +17,7 @@ butInstall.addEventListener('click', async () => {
     promptEvent.prompt();
     const result = await promptEvent.userChoice;
     if (result.outcome === 'accepted') {
+        // A2HS stands for "Add to Home Screen"
         console.log('User accepted the A2HS prompt');
     } else {
         console.log('User dismissed the A2HS prompt');
