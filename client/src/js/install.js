@@ -3,7 +3,8 @@ const butInstall = document.getElementById('buttonInstall');
 // Logic for installing the PWA
 // event handler for the `beforeinstallprompt` event
 window.addEventListener('beforeinstallprompt', (event) => {
-    
+    // prevent browser from showing install prompt
+    window.deferredPrompt = event;
     butInstall.style.visiblity = 'visible';
     
 });
