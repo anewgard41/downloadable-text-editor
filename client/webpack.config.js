@@ -22,7 +22,7 @@ module.exports = () => {
       new InjectManifest({
         swSrc: "./src-sw.js",
         swDest: "src-sw.js",
-      }), 
+      }),
 
       // Introducing the WebPack plugin responsible for generating html files and injecting bundles
       new HtmlWebpackPlugin({
@@ -32,7 +32,7 @@ module.exports = () => {
 
       // WebpackPwaManifest used to generate manifest, make the application installable.
       new WebpackPwaManifest({
-        fingerprints: false, 
+        fingerprints: false,
         inject: true,
         name: 'Just Another Text Editor',
         short_name: 'JATE',
@@ -58,9 +58,16 @@ module.exports = () => {
           test: /\.css$/i,
           use: ["style-loader", "css-loader"],
         },
-
-        
-        
+        {
+          test: /\.m?js$/,
+          exclude: /(node_modules | bower_components)/,
+          use: {
+            loader: "babel-loader",
+            options: {
+              presets: ["@babel/preset-env"],
+            },
+          },
+        },
       ],
     },
   };
