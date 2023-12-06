@@ -8,20 +8,20 @@ With this text editor, you can pseudocode to your heart's content, and then save
 
 ## Up and Running
 
-To get started, clone this repository and run `npm install` to install all the dependencies. Then run `npm run build` to build the project. Finally, run `npm start` to start the server. The text editor will be available at `localhost:3000`.
+To get started, clone this repository and run `npm install` to install all the dependencies. Then run `npm run build` to build the project. Finally, run `npm run start` to start the server. The text editor will be available at `localhost:3000`.
 
-The application is also available via Render. You can access it [here](). 
+The application is also available via Render. You can access it [here](https://installable-text-editor-with-webpack.onrender.com/). 
 
 ## Usage
 
-The text editor is extremely intuitive. Simply type in the editor, and your changes will be automatically saved by the service worker. 
+The text editor is extremely intuitive. Simply type in the editor, and your changes will be automatically saved via the service worker. 
 
-To install the text editor, click on the install button in the top right corner of the browser. The text editor will then be available as a desktop application.
+To install the text editor, click on the install button in the top left corner of the browser. The text editor will then be available as a desktop application.
 
 ## Credits 
 
 I'd like to give a shout out to all the folks at BCS for their constant help and support! And as always big thanks to Kai Chen and Carl Vega for their great instruction and guidance.
 
-Thanks for reading. 
+If you would like to check out any of my other projects, feel free to check out my [Github](https://github.com/)!
 
-Cheers. 
+Cheers!
