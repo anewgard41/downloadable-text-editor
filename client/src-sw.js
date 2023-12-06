@@ -26,11 +26,11 @@ warmStrategyCache({
 
 registerRoute(({ request }) => request.mode === 'navigate', pageCache);
 
-// implementing a stale while revalidate strategy for assets
+// register route for offline fallback
 registerRoute(
   ({ request }) => request.destination === 'script' ||
     request.destination === 'style' || request.destination === 'worker',
-  new StaleWhileRevalidate({
+  new CacheFirst({
     cacheName: 'asset-cache',
     plugins: [
       new CacheableResponsePlugin({
